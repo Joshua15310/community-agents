@@ -75,6 +75,8 @@ The agent provides structured responses with:
 4. **Data Analysis** - Evaluates risk and performance metrics
 5. **Confident Answer** - Provides actionable insights with reasoning
 
+See [EXAMPLES.md](./EXAMPLES.md) for a complete examples of agent output.
+
 ## Development
 
 ### Available Commands

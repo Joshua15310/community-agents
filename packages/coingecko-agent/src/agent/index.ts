@@ -9,21 +9,23 @@ import { Logger } from '@warden-community-agents/common';
 export async function runCoinGeckoAgent(
   questions: string[],
   options: {
-    modelName: string;
-    temperature: number;
-    systemPrompt: string;
-    responseSchema: zod.Schema;
-    delayBetweenQuestionsMs: number;
-  } = {
-    modelName: 'gpt-4o-mini',
-    temperature: 0,
-    systemPrompt: SystemPrompt,
-    responseSchema: ResponseSchema,
-    delayBetweenQuestionsMs: 500,
-  },
+    modelName?: string;
+    temperature?: number;
+    systemPrompt?: string;
+    responseSchema?: zod.Schema;
+    delayBetweenQuestionsMs?: number;
+  } = {},
 ): Promise<
   { question: string; response: { messages: any[]; structuredResponse: any } }[]
 > {
+  const {
+    modelName = 'gpt-4o-mini',
+    temperature = 0,
+    systemPrompt = SystemPrompt,
+    responseSchema = ResponseSchema,
+    delayBetweenQuestionsMs = 500,
+  } = options;
+
   const logger = new Logger('CoinGeckoAgent');
   logger.info('Starting...');
   const mcpClient = new MultiServerMCPClient({
@@ -36,14 +38,14 @@ export async function runCoinGeckoAgent(
     },
   });
   const model = new ChatOpenAI({
-    modelName: options.modelName,
-    temperature: options.temperature,
+    modelName,
+    temperature,
   });
 
   const agent = createReactAgent({
     llm: model,
     tools: await mcpClient.getTools(),
-    responseFormat: options.responseSchema as any,
+    responseFormat: responseSchema as any,
   });
 
   logger.info('Running question processing');
@@ -59,7 +61,7 @@ export async function runCoinGeckoAgent(
         messages: [
           {
             role: 'system',
-            content: options.systemPrompt,
+            content: systemPrompt,
           },
           { role: 'user', content: question },
         ],
@@ -68,12 +70,12 @@ export async function runCoinGeckoAgent(
       logger.info(
         `[${i + 1}/${questions.length}] Question answered successfully`,
       );
-      if (i < questions.length - 1 && options.delayBetweenQuestionsMs > 0) {
+      if (i < questions.length - 1 && delayBetweenQuestionsMs > 0) {
         logger.info(
-          `[${i + 1}/${questions.length}] Delaying for ${options.delayBetweenQuestionsMs}ms`,
+          `[${i + 1}/${questions.length}] Delaying for ${delayBetweenQuestionsMs}ms`,
         );
         await new Promise((resolve) =>
-          setTimeout(resolve, options.delayBetweenQuestionsMs),
+          setTimeout(resolve, delayBetweenQuestionsMs),
         );
       }
     } catch (error) {
