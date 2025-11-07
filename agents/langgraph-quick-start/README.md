@@ -1,7 +1,45 @@
-# LangGraph quick start Agent
+# Warden Community Agents
 
-This is an example **LangGraph Agent** using the **OpenAI LLM** to answer questions about cryptocurrencies.
+A monorepo for Warden community agents built with TypeScript, featuring AI-powered analysis tools.
 
-You can run this code locally and expand it to build your own Agent, as shown in this guide:
+## 🚀 Getting Started
 
-- [Get Started with LangGraph Agents](../../docs/langgraph-quick-start.md)
+### Prerequisites
+
+- Node.js 20+
+- Yarn package manager
+
+### Installation
+
+```bash
+# Install dependencies
+yarn install
+
+# Build all packages
+yarn build:all
+```
+
+## 🛠️ Development
+
+### Available Scripts
+
+```bash
+# Lint all packages
+yarn lint
+
+# Run tests across all packages
+yarn test
+
+# Format code
+yarn prettier
+
+# Check code formatting
+yarn prettier:check
+
+# Clean build artifacts
+yarn clean
+```
+
+## Documentation
+
+For developer guides, see the [`docs`](docs) directory.
