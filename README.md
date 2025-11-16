@@ -35,7 +35,7 @@ Awesome agents and tools built by the community! Add yours by submitting a PR to
 
 ### Agents
 
-- [Your Agent](https://github.com/username/repo): Description of what your agent does
+-  [Crypto Travel Booker](https://github.com/Joshua15310/travel-defi-agent) — Book hotels under budget with USDC using Grok AI
 
 ### Tools & Resources
 
