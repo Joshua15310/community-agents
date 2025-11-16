@@ -31,11 +31,11 @@ Each agent in the [`agents/`](agents) directory is completely self-sufficient an
 
 Awesome agents and tools built by the community! Add yours by submitting a PR to this README file.
 
-- [Crypto Travel Booker](https://github.com/Joshua15310/travel-defi-agent) — Book hotels under budget with USDC using Grok AI
+- [Crypto Travel Booker](https://github.com/Joshua15310/travel-defi-agent) — Book hotels under budget with USDC using Grok AI.
 
 ### Agents
 
-- [Your Agent](https://github.com/username/repo): Description of what your agent does
+- [Crypto Travel Booker](https://github.com/Joshua15310/travel-defi-agent):LangGraph agent for travel planning and expense optimization using DeFi strategies.
 
 ### Tools & Resources
 
