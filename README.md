@@ -33,13 +33,11 @@ Awesome agents and tools built by the community! Add yours by submitting a PR to
 
 **Format:** `[Project Name](link): Short agent description`
 
-- [Crypto Travel Booker](https://github.com/Joshua15310/travel-defi-agent): Book hotels under budget with USDC using Grok AI
-
 
 ### Agents
 
-- [Your Agent](https://github.com/username/repo): Description of what your agent does
+- [Travel DeFi Agent](https://github.com/Joshua15310/travel-defi-agent): LangGraph agent for travel planning and expense optimization using Gemini AI and DeFi strategies.
 
 ### Tools & Resources
 
-- [Your Tool](https://github.com/username/repo): Description of what your tool does
+- [Warden DeFi Swap Utility](https://github.com/Joshua15310/warden-defi-swap-utility): Python module for finding optimal token swap routes via 1inch API for Warden Agents.
