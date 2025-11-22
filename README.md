@@ -36,7 +36,7 @@ Awesome agents and tools built by the community! Add yours by submitting a PR to
 
 ### Agents
 
-- [Travel DeFi Agent](https://github.com/Joshua15310/travel-defi-agent): LangGraph agent for travel planning and expense optimization using Gemini AI and DeFi strategies.
+- [Travel DeFi Agent](https://github.com/Joshua15310/travel-defi-agent): LangGraph agent for travel planning and expense optimization using Grok AI and DeFi strategies.
 
 ### Tools & Resources
 
